@@ -47,6 +47,7 @@ app.get('/ebay', function(req, res){
 	})
 })
 
-app.listen('8081')
-console.log('Magic happens on port 8081');
+var port = Number(process.env.PORT || 5000);
+app.listen(port)
+console.log('Magic happens on port '+port);
 exports = module.exports = app;
